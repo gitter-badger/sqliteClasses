@@ -78,7 +78,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git =>'https://github.com/osoftz/sqliteClasses.git', :commit=> "1cb296c305b1c902c5ebbb319067e81a9fafe7a1"}
+  s.source       = { :git =>'https://github.com/osoftz/sqliteClasses.git', , :branch => "master" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
