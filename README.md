@@ -1,10 +1,10 @@
 # sqliteClasses
 
-
+[![Build Status][TravisBadge]][TravisLink] [![CocoaPods Version][CocoaPodsVersionBadge]][CocoaPodsVersionLink] [![Swift4 compatible][Swift4Badge]][Swift4Link] [![Platform][PlatformBadge]][PlatformLink] [![Carthage compatible][CartagheBadge]][CarthageLink] [![Join the chat at https://gitter.im/osoftz_iOS/sqliteClasses][GitterBadge]][GitterLink]
 
 A type-safe, [Swift][]-language layer over [SQLite3][].
 
-[SQLite.swift][] provides compile-time confidence in SQL statement
+[sqliteClasses][] provides compile-time confidence in SQL statement
 syntax _and_ intent.
 
 ## Features
@@ -19,6 +19,10 @@ syntax _and_ intent.
  - [Well-documented][See Documentation]
  - Extensively tested
  - [SQLCipher][] support via CocoaPods
+ - Active support at
+   [StackOverflow](http://stackoverflow.com/questions/tagged/sqlite.swift),
+   and [Gitter Chat Room](https://gitter.im/osoftz_iOS/sqliteClasses)
+   (_experimental_)
 
 [SQLCipher]: https://www.zetetic.net/sqlcipher/
 [Full-text search]: Documentation/Index.md#full-text-search
@@ -28,8 +32,6 @@ syntax _and_ intent.
 ## Usage
 
 ```swift
-import SQLiteClasses
-
 /* *********************Creating and Assigning DB************************* */
          createDB(DBName: "First_DB"){
             data, error in
@@ -116,7 +118,46 @@ import SQLiteClasses
         else{
             print("Error while Delete \(dd.1!)")
         }
-  ```
+```
+
+[Read the documentation][See Documentation] or explore more,
+interactively, from the Xcode project’s playground.
+
+![SQLite.playground Screen Shot](Documentation/Resources/playground@2x.png)
+
+For a more comprehensive example, see
+[this article][Create a Data Access Layer with sqliteClasses and Swift 2]
+and the [companion repository][SQLiteDataAccessLayer2].
+
+
+[Create a Data Access Layer with sqliteClasses and Swift 2]: http://masteringswift.blogspot.com/2015/09/create-data-access-layer-with.html
+[SQLiteDataAccessLayer2]: https://github.com/hoffmanjon/SQLiteDataAccessLayer2/tree/master
+
+## Installation
+
+> _Note:_ sqliteClasses requires Swift 4.1 (and [Xcode][] 9.3).
+
+### Carthage
+
+[Carthage][] is a simple, decentralized dependency manager for Cocoa. To
+install sqliteClasses with Carthage:
+
+ 1. Make sure Carthage is [installed][Carthage Installation].
+
+ 2. Update your Cartfile to include the following:
+
+    ```ruby
+    github "osoftz/sqliteClasses"
+    ```
+
+ 3. Run `carthage update` and
+    [add the appropriate framework][Carthage Usage].
+
+
+[Carthage]: https://github.com/Carthage/Carthage
+[Carthage Installation]: https://github.com/Carthage/Carthage#installing-carthage
+[Carthage Usage]: https://github.com/Carthage/Carthage#adding-frameworks-to-an-application
+
 
 ### CocoaPods
 
@@ -147,6 +188,23 @@ sqliteClasses with CocoaPods:
 [CocoaPods]: https://cocoapods.org
 [CocoaPods Installation]: https://guides.cocoapods.org/using/getting-started.html#getting-started
 
+### Swift Package Manager
+
+The [Swift Package Manager][] is a tool for managing the distribution of
+Swift code.
+
+1. Add the following to your `Package.swift` file:
+
+  ```swift
+  dependencies: [
+      .package(url: "https://github.com/osoftz/sqliteClasses.git", from: "0.11.5")
+  ]
+  ```
+
+2. Build your project:
+
+  ```sh
+  $ swift build
   ```
 
 [Swift Package Manager]: https://swift.org/package-manager
@@ -155,7 +213,7 @@ sqliteClasses with CocoaPods:
 
 To install sqliteClasses as an Xcode sub-project:
 
- 1. Drag the **sqliteClasses** file into your own project.
+ 1. Drag the **SQLite.xcodeproj** file into your own project.
     ([Submodule][], clone, or [download][] the project first.)
 
     ![Installation Screen Shot](Documentation/Resources/installation@2x.png)
@@ -163,7 +221,7 @@ To install sqliteClasses as an Xcode sub-project:
  2. In your target’s **General** tab, click the **+** button under **Linked
     Frameworks and Libraries**.
 
- 3. Select the appropriate **sqliteClasses** for your platform.
+ 3. Select the appropriate **SQLite.framework** for your platform.
 
  4. **Add**.
 
@@ -173,13 +231,14 @@ device:
  5. In the **General** tab, click the **+** button under **Embedded
     Binaries**.
 
- 6. Select the appropriate **sqliteClasses.framework** for your platform.
+ 6. Select the appropriate **SQLite.framework** for your platform.
 
  7. **Add**.
 
 
 [Xcode]: https://developer.apple.com/xcode/downloads/
 [Submodule]: http://git-scm.com/book/en/Git-Tools-Submodules
+[download]: https://github.com/osoftz/sqliteClasses/archive/master.zip
 
 
 ## Communication
@@ -189,19 +248,21 @@ device:
 [Read the contributing guidelines][]. The _TL;DR_ (but please; _R_):
 
  - Need **help** or have a **general question**? [Ask on Stack
-   Overflow][] (tag `sqliteClasses`).
+   Overflow][] (tag `sqlite.swift`).
  - Found a **bug** or have a **feature request**? [Open an issue][].
  - Want to **contribute**? [Submit a pull request][].
 
 [See the planning document]: /Documentation/Planning.md
 [Read the contributing guidelines]: ./CONTRIBUTING.md#contributing
-[Ask on Stack Overflow]: http://stackoverflow.com/questions/tagged/sqliteClasses
+[Ask on Stack Overflow]: http://stackoverflow.com/questions/tagged/sqlite.swift
+[Open an issue]: https://github.com/osoftz/sqliteClasses/issues/new
+[Submit a pull request]: https://github.com/osoftz/sqliteClasses/fork
 
 
 ## Author
 
- - [Osoftz](mailto:ios@osoftz.com)
-   
+ - [Stephen Celis](mailto:stephen@stephencelis.com)
+   ([@stephencelis](https://twitter.com/stephencelis))
 
 
 ## License
@@ -213,7 +274,8 @@ file](./LICENSE.txt) for more information.
 
 These projects enhance or use sqliteClasses:
 
- - [sqliteClasses][]
+ - [SQLiteMigrationManager.swift][] (inspired by
+   [FMDBMigrationManager][])
 
 
 ## Alternatives
@@ -229,15 +291,22 @@ Looking for something else? Try another Swift wrapper (or [FMDB][]):
 
 [Swift]: https://swift.org/
 [SQLite3]: http://www.sqlite.org
+[sqliteClasses]: https://github.com/osoftz/sqliteClasses
 
-[CocoaPodsVersionBadge]: https://cocoapod-badges.herokuapp.com/v/SQLite.swift/badge.png
-[CocoaPodsVersionLink]: http://cocoadocs.org/docsets/SQLite.swift
+[TravisBadge]: https://img.shields.io/travis/osoftz/sqliteClasses/master.svg?style=flat
+[TravisLink]: https://travis-ci.org/
 
-[PlatformBadge]: https://cocoapod-badges.herokuapp.com/p/SQLite.swift/badge.png
-[PlatformLink]: http://cocoadocs.org/docsets/SQLite.swift
+[CocoaPodsVersionBadge]: https://cocoapod-badges.herokuapp.com/v/sqliteClasses/badge.png
+[CocoaPodsVersionLink]: http://cocoadocs.org/docsets/sqliteClasses
+
+[PlatformBadge]: https://cocoapod-badges.herokuapp.com/p/sqliteClasses/badge.png
+[PlatformLink]: http://cocoadocs.org/docsets/sqliteClasses
 
 [CartagheBadge]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
 [CarthageLink]: https://github.com/Carthage/Carthage
+
+[GitterBadge]: https://badges.gitter.im/https://gitter.im/osoftz_iOS/sqliteClasses
+[GitterLink]: https://gitter.im/https://gitter.im/osoftz_iOS
 
 [Swift4Badge]: https://img.shields.io/badge/swift-4.1-orange.svg?style=flat
 [Swift4Link]: https://developer.apple.com/swift/
@@ -245,5 +314,3 @@ Looking for something else? Try another Swift wrapper (or [FMDB][]):
 [SQLiteMigrationManager.swift]: https://github.com/garriguv/SQLiteMigrationManager.swift
 [FMDB]: https://github.com/ccgus/fmdb
 [FMDBMigrationManager]: https://github.com/layerhq/FMDBMigrationManager
-
-
