@@ -1,1 +1,2 @@
 # sqliteClasses
+pod 'sqliteClasses'
