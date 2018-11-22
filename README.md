@@ -1,11 +1,11 @@
 
 # SQLiteClasses
 
-[![Build Status][TravisBadge]][TravisLink] [![CocoaPods Version][CocoaPodsVersionBadge]][CocoaPodsVersionLink] [![Swift4 compatible][Swift4Badge]][Swift4Link] [![Platform][PlatformBadge]][PlatformLink] [![Carthage compatible][CartagheBadge]][CarthageLink] [![Join the chat at https://gitter.im/stephencelis/SQLite.swift][GitterBadge]][GitterLink]
+[![Build Status][TravisBadge]][TravisLink] [![CocoaPods Version][CocoaPodsVersionBadge]][CocoaPodsVersionLink] [![Swift4 compatible][Swift4Badge]][Swift4Link] [![Platform][PlatformBadge]][PlatformLink]
 
 A type-safe, [Swift][]-language layer over [SQLite3][].
 
-[SQLite.swift][] provides compile-time confidence in SQL statement
+[SQLiteClasses][] provides compile-time methods for SQL statement in runtime
 syntax _and_ intent.
 
 ## Features
@@ -121,7 +121,7 @@ import SQLiteClasses
         else{
             print("Error while Delete \(dd.1!)")
         }
-        ```
+  ```
 
 ### CocoaPods
 
@@ -158,7 +158,7 @@ SQLite.swift with CocoaPods:
 
 ### Manual
 
-To install SQLite.swift as an Xcode sub-project:
+To install sqliteClasses as an Xcode sub-project:
 
  1. Drag the **sqliteClasses** file into your own project.
     ([Submodule][], clone, or [download][] the project first.)
