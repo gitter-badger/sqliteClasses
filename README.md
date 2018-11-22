@@ -1,7 +1,7 @@
 
 # SQLiteClasses
 
-[![Build Status][TravisBadge]][TravisLink][![CocoaPods Version][CocoaPodsVersionBadge]][CocoaPodsVersionLink] [![Swift4 compatible][Swift4Badge]][Swift4Link] [![Platform][PlatformBadge]][PlatformLink]
+[![Build Status][TravisBadge]][TravisLink] [![CocoaPods Version][CocoaPodsVersionBadge]][CocoaPodsVersionLink] [![Swift4 compatible][Swift4Badge]][Swift4Link] [![Platform][PlatformBadge]][PlatformLink] [![Join the chat at gitter.im/osoftz_iOS/sqliteClasses][GitterBadge]][GitterLink]
 
 A type-safe, [Swift][]-language layer over [SQLite3][].
 
@@ -20,10 +20,6 @@ syntax _and_ intent.
  - [Well-documented][See Documentation]
  - Extensively tested
  - [SQLCipher][] support via CocoaPods
- - Active support at
-   [StackOverflow](http://stackoverflow.com/questions/tagged/sqlite.swift),
-   and [Gitter Chat Room](https://gitter.im/stephencelis/SQLite.swift)
-   (_experimental_)
 
 [SQLCipher]: https://www.zetetic.net/sqlcipher/
 [Full-text search]: Documentation/Index.md#full-text-search
@@ -126,9 +122,9 @@ import SQLiteClasses
 ### CocoaPods
 
 [CocoaPods][] is a dependency manager for Cocoa projects. To install
-SQLite.swift with CocoaPods:
+sqliteClasses with CocoaPods:
 
- 1. Make sure CocoaPods is [installed][CocoaPods Installation]. (SQLite.swift
+ 1. Make sure CocoaPods is [installed][CocoaPods Installation]. (sqliteClasses
     requires version 1.0.0 or greater.)
 
     ```sh
@@ -185,7 +181,6 @@ device:
 
 [Xcode]: https://developer.apple.com/xcode/downloads/
 [Submodule]: http://git-scm.com/book/en/Git-Tools-Submodules
-[download]: https://github.com/stephencelis/SQLite.swift/archive/master.zip
 
 
 ## Communication
@@ -201,9 +196,7 @@ device:
 
 [See the planning document]: /Documentation/Planning.md
 [Read the contributing guidelines]: ./CONTRIBUTING.md#contributing
-[Ask on Stack Overflow]: http://stackoverflow.com/questions/tagged/sqlite.swift
-[Open an issue]: https://github.com/stephencelis/SQLite.swift/issues/new
-[Submit a pull request]: https://github.com/stephencelis/SQLite.swift/fork
+[Ask on Stack Overflow]: http://stackoverflow.com/questions/tagged/sqliteClasses
 
 
 ## Author
@@ -221,7 +214,7 @@ file](./LICENSE.txt) for more information.
 
 These projects enhance or use sqliteClasses:
 
- - [SQLite.swift][]
+ - [sqliteClasses][]
 
 
 ## Alternatives
@@ -237,10 +230,6 @@ Looking for something else? Try another Swift wrapper (or [FMDB][]):
 
 [Swift]: https://swift.org/
 [SQLite3]: http://www.sqlite.org
-[SQLite.swift]: https://github.com/stephencelis/SQLite.swift
-
-[TravisBadge]: https://img.shields.io/travis/stephencelis/SQLite.swift/master.svg?style=flat
-[TravisLink]: https://travis-ci.org/stephencelis/SQLite.swift
 
 [CocoaPodsVersionBadge]: https://cocoapod-badges.herokuapp.com/v/SQLite.swift/badge.png
 [CocoaPodsVersionLink]: http://cocoadocs.org/docsets/SQLite.swift
@@ -250,9 +239,6 @@ Looking for something else? Try another Swift wrapper (or [FMDB][]):
 
 [CartagheBadge]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
 [CarthageLink]: https://github.com/Carthage/Carthage
-
-[GitterBadge]: https://badges.gitter.im/stephencelis/SQLite.swift.svg
-[GitterLink]: https://gitter.im/stephencelis/SQLite.swift
 
 [Swift4Badge]: https://img.shields.io/badge/swift-4.1-orange.svg?style=flat
 [Swift4Link]: https://developer.apple.com/swift/
