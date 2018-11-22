@@ -6,7 +6,7 @@ SQLite classes
 =============================================================
 SQLite classes gives you the methods to implement the local databse for iOS applications.
 
-<a href="http://osoftz.com">SQLiteClasses</a> is a project of <a href="http://osoftz.com">OSOFTZ</a>.
+<a href="https://github.com/osoftz/sqliteClasses.git">SQLiteClasses</a> is a project of <a href="http://osoftz.com">OSOFTZ</a>.
 
 Requires:
 
