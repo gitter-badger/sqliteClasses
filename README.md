@@ -1,7 +1,7 @@
 
 # SQLiteClasses
 
-[![Build Status][TravisBadge]][TravisLink] [![CocoaPods Version][CocoaPodsVersionBadge]][CocoaPodsVersionLink] [![Swift4 compatible][Swift4Badge]][Swift4Link] [![Platform][PlatformBadge]][PlatformLink] [![Join the chat at gitter.im/osoftz_iOS/sqliteClasses][GitterBadge]][GitterLink]
+[![Build Status][TravisBadge]][TravisLink] [![CocoaPods Version][CocoaPodsVersionBadge]][CocoaPodsVersionLink] [![Swift4 compatible][Swift4Badge]][Swift4Link] [![Platform][PlatformBadge]][PlatformLink] [![Carthage compatible][CartagheBadge]][CarthageLink] [![Join the chat at https://gitter.im/osoftz_iOS/sqliteClasses][GitterBadge]][GitterLink]
 
 A type-safe, [Swift][]-language layer over [SQLite3][].
 
