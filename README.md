@@ -305,8 +305,8 @@ Looking for something else? Try another Swift wrapper (or [FMDB][]):
 [CartagheBadge]: https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat
 [CarthageLink]: https://github.com/Carthage/Carthage
 
-[GitterBadge]: https://badges.gitter.im/https://gitter.im/osoftz_iOS/sqliteClasses
-[GitterLink]: https://gitter.im/https://gitter.im/osoftz_iOS
+[GitterBadge]: https://gitter.im/osoftz_iOS/sqliteClasses
+[GitterLink]: https://gitter.im/osoftz_iOS
 
 [Swift4Badge]: https://img.shields.io/badge/swift-4.1-orange.svg?style=flat
 [Swift4Link]: https://developer.apple.com/swift/
